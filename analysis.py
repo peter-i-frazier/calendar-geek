@@ -1,5 +1,3 @@
-#!/Users/pfrazier/Library/Enthought/Canopy_64bit/User/bin/python
-
 # This script creates a histogram of hours worked per day, based on
 # covariates. It can then be used to determine how many hours are predicted
 # to be available for work.
@@ -42,8 +40,8 @@ FLOW = OAuth2WebServerFlow(
 # If the Credentials don't exist or are invalid, run through the native client
 # flow. The Storage object will ensure that if successful the good
 # Credentials will get written back to a file.
-# Feature: Don't hardcode the location of calendar.dat
-storage = Storage('/Users/pfrazier/calendar.dat')
+# Feature: Don't hardcode the location of gcaltimetracker.dat
+storage = Storage('/Users/pf98/gcaltimetracker.dat')
 credentials = storage.get()
 if credentials is None or credentials.invalid == True:
   credentials = run(FLOW, storage)

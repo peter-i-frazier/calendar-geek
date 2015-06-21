@@ -1,4 +1,4 @@
-#!/Users/pfrazier/Library/Enthought/Canopy_64bit/User/bin/python
+#!/usr/local/bin/python
 
 import gflags
 import httplib2
@@ -37,7 +37,7 @@ start = args.start
 
 # File that google uses to store authentication information.  Should be
 # readable and writable.
-credential_file = '/Users/pfrazier/calendar.dat'
+credential_file = '/Users/pf98/gcaltimetracker.dat'
 
 # List of calendars to get events from.
 # Feature request: allow the user to specify these calendars on the command

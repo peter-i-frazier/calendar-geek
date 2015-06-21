@@ -1,4 +1,4 @@
-#!/Users/pfrazier/Library/Enthought/Canopy_64bit/User/bin/python
+#!/usr/local/bin/python
 
 import sys
 import string
