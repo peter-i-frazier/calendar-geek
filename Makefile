@@ -23,3 +23,6 @@ clean-install:
 	rm -f $(BIN)/how_much_did_i_work_per_week.sh
 	rm -f $(BIN)/how_much_will_i_work.sh
 	rm -f $(BIN)/todo_backlog.sh
+
+test:
+	how_much_did_i_work.sh 8/01/2015

@@ -42,8 +42,8 @@ credential_file = '/Users/pf98/gcaltimetracker.dat'
 # List of calendars to get events from.
 # Feature request: allow the user to specify these calendars on the command
 # line, and to do it via their descriptions rather than their ids.
-calendars = {'bu7c7742dbv9v4daqmqqcsqo5k@group.calendar.google.com',  # todo calendar
-            'i304j8vnu0tdi6rhj9ip3nlj74@group.calendar.google.com', #Floating calendar
+calendars = {'bu7c7742dbv9v4daqmqqcsqo5k@group.calendar.google.com', #todo calendar
+            'i304j8vnu0tdi6rhj9ip3nlj74@group.calendar.google.com',  #Floating calendar
              '4m9g61tcu5bsj4rcfp4ilvb23g@group.calendar.google.com', #to-do-repeat calendar
              'primary'}
 

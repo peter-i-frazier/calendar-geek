@@ -23,6 +23,8 @@ fi
 
 echo "START_DAY=$START_DAY, END_DAY=$END_DAY"
 
-gcalcli --nocache --cal=peter.i.frazier --cal=Other --cal=ResearchPF --tsv agenda "12am $START_DAY" "11:59pm $END_DAY" | egrep -v '#home|#note' | gcalcli_count.py
+# pfrazier is my Uber calendar for meetings
+# What I did is my Uber calendar for non-meeting work 
+gcalcli --nocache --cal=peter.i.frazier --cal=Other --cal=ResearchPF --cal=pfrazier --cal='What I did' --tsv agenda "12am $START_DAY" "11:59pm $END_DAY" | egrep -v '#home|#note' | gcalcli_count.py
 
 # To do: make it easy to ask for a full week

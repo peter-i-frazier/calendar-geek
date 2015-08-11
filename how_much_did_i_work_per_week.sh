@@ -5,6 +5,10 @@
 total=0
 n_weeks=0
 
+#
+# 2014
+#
+
 # how_much_did_i_work.sh 6/2  6/8 | grep 'Total Hours'
 echo "6/02 to 6/08, Total Hours (cached): 56.0"
 this_week=56
@@ -29,7 +33,6 @@ echo "6/23 to 6/29, Total Hours (cached): 39.1666666667"
 this_week=39
 n_weeks=$((n_weeks+1))
 total=$((total+this_week))
-
 
 #how_much_did_i_work.sh 6/30 7/6 | grep 'Total Hours'
 echo "6/20 to 7/06, Total Hours (cached): 33.25"
@@ -182,7 +185,9 @@ n_weeks=$((n_weeks+1))
 total=$((total+this_week))
 
 
+# PF: need to fill in teh gap from 
+
+
+
 echo "Average hours per week"
 echo $((total/n_weeks))
-
-
