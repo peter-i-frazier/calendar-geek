@@ -15,6 +15,8 @@ import matplotlib.dates as mdates
 
 import argparse
 
+from os.path import expanduser
+
 parser = argparse.ArgumentParser(description='Time planning google calendar script.')
 def mkdate(datestr):
     return dateutil.parser.parse(datestr).date()
@@ -35,9 +37,9 @@ start = args.start
 
 # The following parameter should go into a configuration file
 
-# File that google uses to store authentication information.  Should be
-# readable and writable.
-credential_file = '/Users/pf98/gcaltimetracker.dat'
+# File that google uses to store authentication information, currently
+# hard-coded to ~/calendar-geek.dat.  Should be readable and writable.
+credential_file = expanduser('~/calendar-geek.dat')
 
 # List of calendars to get events from.
 # Feature request: allow the user to specify these calendars on the command

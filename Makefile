@@ -25,4 +25,5 @@ clean-install:
 	rm -f $(BIN)/todo_backlog.sh
 
 test:
+	$(DIR)/atp.py
 	how_much_did_i_work.sh 8/01/2015

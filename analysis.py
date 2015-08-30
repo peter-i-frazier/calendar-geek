@@ -20,6 +20,8 @@ import dateutil.parser
 
 import matplotlib.pyplot as plt
 
+from os.path import expanduser
+
 FLAGS = gflags.FLAGS
 
 # Set up a Flow object to be used if we need to authenticate. This
@@ -37,11 +39,14 @@ FLOW = OAuth2WebServerFlow(
 # To disable the local server feature, uncomment the following line:
 # FLAGS.auth_local_webserver = False
 
+# File that google uses to store authentication information, currently
+# hard-coded to ~/calendar-geek.dat.  Should be readable and writable.
+credential_file = expanduser('~/calendar-geek.dat')
+
 # If the Credentials don't exist or are invalid, run through the native client
 # flow. The Storage object will ensure that if successful the good
 # Credentials will get written back to a file.
-# Feature: Don't hardcode the location of gcaltimetracker.dat
-storage = Storage('/Users/pf98/gcaltimetracker.dat')
+storage = Storage(credential_file)
 credentials = storage.get()
 if credentials is None or credentials.invalid == True:
   credentials = run(FLOW, storage)
@@ -54,6 +59,7 @@ http = credentials.authorize(http)
 # Build a service object for interacting with the API. Visit
 # the Google Developers Console
 # to get a developerKey for your own application.
+# PF: we want a reasonable message to show up for the user.  Should we change serviceName?
 service = build(serviceName='calendar', version='v3', http=http,
        developerKey='YOUR_DEVELOPER_KEY')
 
